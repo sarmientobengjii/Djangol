@@ -11,3 +11,6 @@ def user(request):
 
 def voter(request):
     return HttpResponse("Voters here")
+
+def index(request):
+    return render(request, 'polls/home.html')
