@@ -1,6 +1,16 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 #views here
-def home(request):
-    return render(request, "polls/home.html")
 
+def index(request):
+    return HttpResponse("Hello, Voters. You're at the polls page.")
+
+def user(request):
+    return HttpResponse("USER here")
+
+def voter(request):
+    return HttpResponse("Voters here")
+
+def index(request):
+    return render(request, 'polls/home.html')
